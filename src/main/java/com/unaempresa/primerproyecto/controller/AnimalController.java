@@ -62,7 +62,7 @@ public class AnimalController {
 	
 	@GetMapping("/id/{id}")
 	public String m(@PathVariable int id, Model model) {
-	    model.addAttribute("cabecera", "Mostrando la informacion de un animal con Id" + id);
+	    model.addAttribute("cabecera", "Mostrando la informacion de un animal con Id " + id);
 	    model.addAttribute("animal", Animales.dameAnimalPorId(id).orElse(null));
 	    return "animal/mostrar-uno";
 	}
