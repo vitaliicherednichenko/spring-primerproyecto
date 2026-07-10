@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${titulo}"></title>
+</head>
+<body>
+    <h1 th:text="'Combinación de loto (' + ${loto.pais} + ')'"></h1>
+	<p th:text="${loto.cantidadNumeros} + ' números del 1 al ' + ${loto.numeroMaximo}"></p>
+	<ul>
+		<li th:each="numero: ${loto.numeros}" th:text="${numero}"></li>
+	</ul>
+	<br />
+	<a th:href="@{/loto/menu}">Volver al menú de loto</a>
+</body>
+</html>

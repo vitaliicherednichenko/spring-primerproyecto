@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${titulo}"></title>
+</head>
+<body>
+    <h1 th:text="${cabecera}"></h1>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>Image</th>
+				<th>Capital name</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="image: ${images}">
+				<td><img width="200" th:src="@{${image.path}}" th:alt="${image.capitalName}"/></td>
+				<td th:text="${image.capitalName}"></td>
+			</tr>
+		</tbody>
+	</table>
+	<br />
+	<a th:href="@{/}">Volver al home</a>
+</body>
+</html>
