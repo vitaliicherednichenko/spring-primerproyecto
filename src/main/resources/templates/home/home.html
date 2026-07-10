@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Home</h1>
+    <img width="200" th:src="@{img/googlelogo.png}"/>
+    <br />
+    <a href="https://www.google.com">Ir a google</a>
+    <br />
+    <a th:href="@{/animal/mostrar-lista}">Ir a la lista de animales</a>
+    <br />
+    <a th:href="@{/contadores/lista}">Ir a la lista de contadores</a>
+</body>
+</html>

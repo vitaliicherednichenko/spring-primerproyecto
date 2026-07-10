@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${titulo}"></title>
+</head>
+<body>
+    <h1 th:text="${cabecera}"></h1>
+	<p th:unless="${animal != null}">No hay animale que mostrar</p>
+	<ul th:if="${animal != null}">
+		<li>Id: <span th:text="${animal.id}"></span></li>
+		<li>Tipo: <span th:text="${animal.tipo}"></span></li>
+		<li>Peso: <span th:text="${animal.peso}"></span></li>
+		<li>Color: <span th:text="${animal.color}"></span></li>
+	</ul>
+</body>
+</html>
