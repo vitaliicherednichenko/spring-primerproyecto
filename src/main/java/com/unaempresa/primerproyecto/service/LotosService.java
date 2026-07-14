@@ -1,11 +1,14 @@
-package com.unaempresa.primerproyecto.model;
+package com.unaempresa.primerproyecto.service;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Lotos {
+import org.springframework.stereotype.Service;
+import com.unaempresa.primerproyecto.model.Loto;
 
+@Service
+public class LotosService {
 	public static Loto generaCombinacion(int numeroMaximo, int cantidadNumeros, String pais) {
 		List<Integer> bombo = new ArrayList<>();
 		for (int numero = 1; numero <= numeroMaximo; numero++) {

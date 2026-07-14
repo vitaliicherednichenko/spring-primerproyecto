@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${cabecera}"></title>
+</head>
+<body>
+    <h1 th:text="${cabecera}"></h1>
+	<p th:if="${acierto}">
+		Has acertado. La respuesta era <b th:text="${correcta}"></b>.
+	</p>
+	<p th:unless="${acierto}">
+		Has fallado. Elegiste <b th:text="${elegida}"></b>, pero la respuesta correcta era <b th:text="${correcta}"></b>.
+	</p>
+	<br />
+	<a th:href="@{/acertijo/menu}">Probar con otra ciudad</a>
+	<br />
+	<a th:href="@{/}">Volver al menú</a>
+</body>
+</html>

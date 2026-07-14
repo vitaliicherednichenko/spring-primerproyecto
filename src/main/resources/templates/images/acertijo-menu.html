@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${cabecera}"></title>
+</head>
+<body>
+    <h1 th:text="${cabecera}"></h1>
+	<img width="300" th:src="@{${imagen.path}}" th:alt="${imagen.capitalName}"/>
+	<br />
+	<br />
+	<div th:each="opcion: ${opciones}">
+		<a th:href="@{/acertijo/responder/{correcta}/{elegida}(correcta=${imagen.capitalName}, elegida=${opcion})}"
+		   th:text="${opcion}"></a>
+	</div>
+	<br />
+	<a th:href="@{/}">Volver al home</a>
+</body>
+</html>

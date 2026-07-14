@@ -2,15 +2,15 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
+    <title th:text="${titulo}"></title>
 </head>
 <body>
 	<img width="50" th:src="@{img/avatar.JPG}"/>
 	<div style="text-align: center;">
-		<h1>Home</h1>
+		<h1 th:text="${cabecera}"></h1>
 		<p>lorem ipsum</p>
 		<br />
-		<p style="font-style: italic;" th:text="${home.proverbio}"></p>
+		<p style="font-style: italic;" th:text="${home}"></p>
 		<br />
 	    <br />
 	    <a href="https://www.google.com">Ir a google</a>
@@ -48,6 +48,8 @@
 	    <a th:href="@{/libros/menu}">Ir al listado de libros</a>
 	    <br />
 	    <a th:href="@{/image}">Ir al listado de imágenes</a>
+	    <br />
+	    <a th:href="@{/acertijo/menu}">Ir al acertijo de ciudades</a>
 	</div>
 </body>
 </html>
